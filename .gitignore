@@ -1,1 +1,14 @@
-/data/raw
+# Raw SHED downloads stay out of git; the manifest is tracked.
+/data/raw/*
+!/data/raw/MANIFEST.md
+/data/interim/*
+!/data/interim/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.DS_Store

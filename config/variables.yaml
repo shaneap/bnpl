@@ -1,0 +1,3 @@
+# Harmonized variable map: concept -> per-wave source column + recode.
+# Filled in Phase 2. Every source column must trace to docs/variable_inventory.md.
+concepts: {}

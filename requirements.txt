@@ -1,0 +1,9 @@
+# Python 3.11. All versions pinned; add packages only with a pinned version.
+matplotlib==3.11.2
+numpy==2.4.6
+pandas==3.1.0
+pypdf==6.21.2
+pytest==9.1.1
+PyYAML==6.0.3
+scikit-learn==1.9.1
+statsmodels==0.15.0
