@@ -1,0 +1,10 @@
+stat,wave,published_pct,denominator,n_unweighted,pct,n_imputed,estimate_rounded,match
+bnpl_use,2021,10,all adults,11874,10.37,34,10,True
+bnpl_use,2022,12,all adults,11667,12.10,28,12,True
+bnpl_use,2023,14,all adults,11400,13.62,23,14,True
+bnpl_use,2024,15,all adults,12295,14.68,30,15,True
+bnpl_use,2025,16,all adults,12934,16.49,31,16,True
+bnpl_late,2023,18,BNPL users,1455,18.36,7,18,True
+bnpl_late,2025,26,BNPL users,2004,25.78,8,26,True
+bnpl_late_fee,2023,11,BNPL users,1455,10.83,2,11,True
+bnpl_late_fee,2024,13,BNPL users,1670,13.41,10,13,True

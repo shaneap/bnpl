@@ -1,0 +1,20 @@
+stat,wave,denominator,n_unweighted,pct,n_imputed
+bnpl_use,2021,all adults,11874,10.37,34
+bnpl_late,2021,BNPL users,1107,15.12,8
+bnpl_use,2022,all adults,11667,12.10,28
+bnpl_late,2022,BNPL users,1279,17.10,7
+bnpl_late_fee,2022,BNPL users,1279,9.47,3
+bnpl_late_fee_among_late,2022,late payers,206,55.41,2
+bnpl_use,2023,all adults,11400,13.62,23
+bnpl_late,2023,BNPL users,1455,18.36,7
+bnpl_late_fee,2023,BNPL users,1455,10.83,2
+bnpl_late_fee_among_late,2023,late payers,244,58.98,2
+bnpl_use,2024,all adults,12295,14.68,30
+bnpl_late,2024,BNPL users,1670,23.63,12
+bnpl_late_fee,2024,BNPL users,1670,13.41,10
+bnpl_late_fee_among_late,2024,late payers,358,56.78,3
+bnpl_use,2025,all adults,12934,16.49,31
+bnpl_late,2025,BNPL users,2004,25.78,8
+bnpl_late_fee,2025,BNPL users,2004,16.53,9
+bnpl_late_fee_among_late,2025,late payers,487,64.11,3
+bnpl_overdraft_among_asked,2025,BNPL users who paid an overdraft fee,542,38.78,4

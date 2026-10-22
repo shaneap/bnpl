@@ -1,3 +1,58 @@
 # Harmonized variable map: concept -> per-wave source column + recode.
-# Filled in Phase 2. Every source column must trace to docs/variable_inventory.md.
-concepts: {}
+# Every source column traces to docs/variable_inventory.md (codebook page in brackets).
+# The public CSVs store value labels; `recode` maps label -> harmonized value.
+# A blank cell means not asked (see `universe`). Any label not in `recode` is an error.
+#
+# Phase 2 slice: only the concepts Phase 3 replication needs. Fragility and control
+# recodes are pending author approval.
+
+weights:
+  weight:
+    source: weight
+    note: "Post-stratification weight - Main qualified respondents scaled to sample size. Used for published statistics (2025 codebook)."
+  weight_pop:
+    source: weight_pop
+    note: "Post-stratification weight - Main qualified respondents scaled to U.S. population."
+  panel_weight:
+    source: panel_weight
+    note: "Main recontact respondents scaled to sample size; respondents who took both the prior and current survey."
+
+ids:
+  shedid:
+    source: shedid
+
+concepts:
+  bnpl_use:
+    universe: "All respondents"
+    recode: {"Yes": 1, "No": 0}
+    waves:
+      2021: {source: BNPL1, page: 38, text: 'In the past year, have you used a "Buy Now Pay Later" service to buy something?'}
+      2022: {source: BNPL1, page: 35, text: 'In the past year, have you used a "Buy Now Pay Later" service to buy something?'}
+      2023: {source: BNPL1, page: 39, text: 'In the past year, have you used a "Buy Now Pay Later" service to buy something?'}
+      2024: {source: BNPL1, page: 58, text: 'In the past year, have you used a "Buy Now Pay Later" service to buy something?'}
+      2025: {source: BNPL1, page: 55, text: 'In the past year, have you used a "Buy Now, Pay Later" service to buy something?'}
+
+  bnpl_late:
+    universe: "bnpl_use == 1"
+    recode: {"Yes": 1, "No": 0}
+    waves:
+      2021: {source: BNPL3, page: 39, text: "In the past year, have you ever been late making a payment for something you bought using a Buy Now Pay Later service?"}
+      2022: {source: BNPL3, page: 35, text: "In the past year, have you ever been late making a payment for something you bought using a Buy Now Pay Later service?"}
+      2023: {source: BNPL3, page: 39, text: "In the past year, have you ever been late making a payment for something you bought using a Buy Now Pay Later service?"}
+      2024: {source: BNPL3, page: 58, text: "In the past year, have you ever been late making a payment for something you bought using a Buy Now Pay Later service?"}
+      2025: {source: BNPL3, page: 55, text: "In the past year, have you ever been late making a payment for something you bought using a Buy Now, Pay Later service?"}
+
+  bnpl_late_fee:
+    universe: "bnpl_late == 1"
+    recode: {"Yes": 1, "No": 0}
+    waves:
+      2022: {source: BNPL3A, page: 35, text: "In the past year, have you been charged extra because you were late on a buy now pay later payment?"}
+      2023: {source: BNPL3A, page: 40, text: "In the past year, have you been charged extra because you were late on a buy now pay later payment?"}
+      2024: {source: BNPL3A, page: 58, text: "In the past year, have you been charged extra because you were late on a buy now pay later payment?"}
+      2025: {source: BNPL3A, page: 55, text: "In the past year, have you been charged extra because you were late on a Buy Now, Pay Later payment?"}
+
+  bnpl_overdraft:
+    universe: "bnpl_use == 1 and BK2_f == Yes (paid an overdraft fee in past 12 months)"
+    recode: {"Yes": 1, "No": 0}
+    waves:
+      2025: {source: BNPL1A, page: 55, text: "In the past year, did any of your BNPL payments trigger an overdraft or non-sufficient-funds (NSF) fee on your bank account?"}

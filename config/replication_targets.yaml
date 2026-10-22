@@ -1,0 +1,21 @@
+# Published Fed figures that Phase 3 must reproduce to within rounding.
+# Source as recorded in docs/variable_inventory.md: BNPL use from the Fed's August 2026
+# Consumer & Community Context note (2021-2025 series); 2023/2024 late payment and late
+# fee shares from the Economic Well-Being of U.S. Households reports; 2025 late share from
+# docs/SPEC.md. Values are percent, rounded to whole numbers as published.
+# Denominators: use = all adults; late and late_fee = BNPL users.
+
+targets:
+  - {stat: bnpl_use,      wave: 2021, pct: 10}
+  - {stat: bnpl_use,      wave: 2022, pct: 12}
+  - {stat: bnpl_use,      wave: 2023, pct: 14}
+  - {stat: bnpl_use,      wave: 2024, pct: 15}
+  - {stat: bnpl_use,      wave: 2025, pct: 16}
+  - {stat: bnpl_late,     wave: 2023, pct: 18}
+  - {stat: bnpl_late,     wave: 2025, pct: 26}
+  - {stat: bnpl_late_fee, wave: 2023, pct: 11}
+  - {stat: bnpl_late_fee, wave: 2024, pct: 13}
+
+# Published in words only; reported but not pass/fail.
+qualitative:
+  - {stat: bnpl_late, wave: 2024, text: "nearly 1 in 4"}
