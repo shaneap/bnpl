@@ -1,0 +1,9 @@
+group,n_unweighted,share_of_recontacts_panel_weighted
+2025 recontacts (panel_weight nonmissing),4419,1.0
+  linked to a 2024 record by shedid,4419,1.0
+  used BNPL in 2024 (2024 BNPL1 = Yes),601,0.13965115644916123
+  used BNPL in 2025 (2025 BNPL1 = Yes),630,0.1473373506817491
+  used BNPL in both years,392,0.09088714847541333
+  used BNPL in 2024 or 2025,839,0.19610135865549702
+  2025 BNPL users who were late in 2025 (BNPL3 = Yes),147,0.033980938225630634
+  2024 users who were late in 2024 (BNPL3 = Yes),131,0.030791687985587696
